@@ -16,6 +16,12 @@ h1, h2, h3, h4, h5 {
 
 h1 {
   font-size: 4rem;
+
+  @media @mobile {
+    padding: 2rem;
+
+    font-size: 3rem;
+  }
 }
 
 h2 {
@@ -39,8 +45,21 @@ img {
   height: auto;
 }
 
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
 .container {
   max-width: 800px;
   width: 100%;
   margin: 0 auto;
+
+  @media (max-width: 1000px){
+    padding: 0 2rem;
+  }
+
+  @media @mobile {
+    padding: 0 3rem;
+  }
 }

@@ -1,4 +1,38 @@
+.header-wrapper {
+  .dashedBorder();
+  width: 100%;
+
+  .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 3rem 0;
+
+    @media (max-width: 1000px){
+      padding: 3rem 2rem;
+    }
+
+    @media @mobile {
+      .flexFlip();
+      padding: 0 0 1rem;;
+    }
+
+  }
+}
+
 .home {
+  .btn {
+    .coloredButton(@eastern-blue);
+  }
+
+  .cta {
+    .dashedBorder();
+    padding-bottom: .8rem;
+
+    h2 {
+      padding-top: 2rem;
+    }
+  }
 
   .content-section {
     margin: 30px 0;
@@ -6,16 +40,28 @@
     flex-wrap: wrap;
     justify-content: space-between;
 
+    @media @mobile {
+      .flexFlip();
+    }
+
    
     
     .text-content {
       width: 48%;
       padding-right: 1%;
+
+      @media @mobile {
+        width: 100%;
+      }
     }
 
     .img-content {
       width: 48%;
       padding-left: 1%;
+
+      @media @mobile {
+        width: 100%;
+      }
 
       img {
         border-radius: 10px;
@@ -25,7 +71,11 @@
 
   .inverse-content {
     padding-bottom: 30px;
-    border-bottom: 2px dashed @navigation-border;
+    .dashedBorder();
+
+    @media @mobile {
+      flex-direction: column-reverse;
+    }
 
     .text-content {
       padding-left: 1%;
@@ -42,6 +92,10 @@
     width: 75%;
     margin: 0 auto 30px;
 
+    @media @mobile {
+      width: 100%;
+    }
+
     img {
       border-radius: 10px;
     }
@@ -49,13 +103,22 @@
 
   .content-pick {
     padding-top: 30px;
-    border-top: 2px dashed @navigation-border;
     display: flex;
     justify-content: space-between;
+
+    border-top: 2px dashed @silver;
+
+    @media @mobile {
+      .flexFlip();
+    }
 
     .destination {
       width: 30%;
       margin-bottom: 30px;
+
+      @media @mobile {
+        width: 80%;
+      }
     }
   }
 }// home
